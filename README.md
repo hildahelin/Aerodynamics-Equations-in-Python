@@ -46,9 +46,5 @@ Thanks to Sorbonne University for the opportunity to gain practical experience i
 
 ---
 
-For detailed information and source code, visit the [GitHub repository](https://github.com/yourusername/cessna172-aero-analysis) 👩‍💻🚀
-
----
-
 Feel free to contribute, ask questions, or suggest improvements! 😊
 
