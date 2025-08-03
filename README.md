@@ -1,50 +1,87 @@
 # ✈️ Aerodynamic Analysis of Cessna 172 Wing: Navier-Stokes vs Euler Methods 🛩️
 
-Welcome to this aerodynamic analysis project conducted during my internship at Sorbonne University, focusing on the Cessna 172 aircraft wing.
+This project compares the aerodynamic performance of a flat plate airfoil using two fundamentally different flow models:
+
+- **Euler-based analytical solution** (ideal, inviscid, irrotational)
+- **Navier-Stokes-based simulation data** (realistic, viscous, possibly including stall)
+
+The comparison is made by plotting **lift coefficient (CL)** and **drag coefficient (CD)** as functions of the angle of attack (α), using both analytical formulas and polar data files.
 
 ---
 
-## Project Overview
+## 📐 Theoretical Background
 
-This project compares two fundamental computational fluid dynamics (CFD) approaches — **Navier-Stokes** and **Euler** methods — to analyze the lift (CL) and drag (CD) coefficients of the Cessna 172 wing using polar data from XFOIL simulations.
+### ✅ Euler-Based CL Formula
 
-- **Navier-Stokes data** were obtained using XFOIL with viscosity and Mach number effects included, providing realistic drag coefficients.
-- **Euler method** was implemented by calculating CL and estimating CD with a simplified assumption (constant minimal drag) since Euler equations neglect viscosity.
+In the case of **ideal, incompressible, inviscid (Eulerian) flow**, the lift coefficient for a thin airfoil is given by:
 
----
+\[
+\boxed{C_L = 2\pi \cdot \alpha}
+\]
 
-## Why is the Drag Coefficient (CD) zero in Euler calculations?
+Where:
+- \( \alpha \) is the angle of attack (in **radians**)
+- The airfoil is assumed to be **infinitely thin**
+- No flow separation or stall is considered
 
-Since the Euler equations ignore viscous effects, the drag computed by the Euler method is typically underestimated or near zero. This is because:
+This formula is derived from **thin airfoil theory**, which itself is based on the **Euler equations** and potential flow assumptions. The trailing edge behavior is resolved by enforcing the **Kutta condition**.
 
-- **Viscosity is the main contributor to drag (skin friction and pressure drag).**
-- Without including viscosity in the model, Euler-based drag calculations cannot capture these real aerodynamic losses.
-- In contrast, the Navier-Stokes method incorporates viscosity, resulting in more accurate drag coefficient values.
+> 🔎 At small angles (e.g., \( \alpha < 10^\circ \)), this approximation is highly accurate even for cambered or rounded airfoils.
 
----
+### ⚠️ Note on Navier-Stokes Models
 
-## Data and Methods
-
-- Wing geometry and polar data were generated using **XFOIL**, a well-known airfoil analysis tool.
-- Flight conditions and aircraft specifications for the **Cessna 172** were taken from publicly available general characteristic data, including altitude-dependent air density and cruise speed.
-- The project includes Python scripts that calculate lift and drag forces based on both methods, with detailed graphs comparing CL and CD across angles of attack.
+Real viscous flow (modeled by Navier-Stokes equations) includes boundary layer effects, flow separation, and stall. Therefore, the actual lift curve deviates from the Euler solution at higher angles of attack.
 
 ---
 
-## How to use this repository
+## 📁 File Structure
 
-- Check the `scripts/` folder for source codes.
-- Input files include Navier-Stokes polar data (`naca2412polar_navier.txt`) and Euler polar data (`polar_EULER2412.txt`).
-- Run the scripts to generate comparative plots of lift and drag coefficients.
-- Explore modifications or extend the models with more sophisticated CFD tools or real flight data.
+project/
+│
+├── naca2412polar_navier.txt # Navier-Stokes data: alpha | CL | CD
+├── main.py # Code to compute and plot CL & CD
+├── README.md # You are here
+
+yaml
+Copier
+Modifier
 
 ---
 
-## Acknowledgments
+## ▶️ How to Run
 
-Thanks to Sorbonne University for the opportunity to gain practical experience in aerospace aerodynamics through this internship.
+Make sure you have `matplotlib` and `numpy` installed:
 
----
+```bash
+pip install matplotlib numpy
+Then run the script:
 
-Feel free to contribute, ask questions, or suggest improvements! 😊
+bash
+Copier
+Modifier
+python main.py
+This will generate two plots:
+
+CL vs Angle of Attack
+
+CD vs Angle of Attack
+
+📚 References
+Anderson, J. D. Fundamentals of Aerodynamics, McGraw-Hill
+
+Abbott & Von Doenhoff, Theory of Wing Sections, Dover Publications
+
+NASA Glenn Research Center: Airfoil Theory
+
+🧠 Notes
+While the Euler solution overestimates lift at high angles of attack due to the lack of stall modeling, it provides excellent insight into the fundamental aerodynamic behavior of airfoils in ideal conditions. The Navier-Stokes data captures real-world behavior including flow separation, skin friction, and stall.
+
+📬 Author
+Helin Hilda Uluğtürken
+Saint Michel High School
+AI & Aerospace Engineering Student
+
+yaml
+Copier
+Modifier
 
