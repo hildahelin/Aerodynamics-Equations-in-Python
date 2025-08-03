@@ -48,25 +48,7 @@ Modifier
 
 ---
 
-## ▶️ How to Run
-
-Make sure you have `matplotlib` and `numpy` installed:
-
-```bash
-pip install matplotlib numpy
-Then run the script:
-
-bash
-Copier
-Modifier
-python main.py
-This will generate two plots:
-
-CL vs Angle of Attack
-
-CD vs Angle of Attack
-
-📚 References
+## 📚 References
 Anderson, J. D. Fundamentals of Aerodynamics, McGraw-Hill
 
 Abbott & Von Doenhoff, Theory of Wing Sections, Dover Publications
@@ -79,9 +61,6 @@ While the Euler solution overestimates lift at high angles of attack due to the 
 📬 Author
 Helin Hilda Uluğtürken
 Saint Michel High School
-AI & Aerospace Engineering Student
 
-yaml
-Copier
-Modifier
+
 
