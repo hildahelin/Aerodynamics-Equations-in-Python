@@ -50,7 +50,6 @@ Therefore, the actual lift and drag curves deviate from the ideal Euler predicti
 
 - Anderson, J. D. *Fundamentals of Aerodynamics*, McGraw-Hill  
 - Abbott & Von Doenhoff, *Theory of Wing Sections*, Dover Publications  
-- NASA Glenn Research Center: [Airfoil Theory](https://www.grc.nasa.gov/www/k-12/airplane/foil2.html)
 
 ---
 
