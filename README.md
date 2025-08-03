@@ -16,17 +16,18 @@ The comparison is made by plotting **lift coefficient (CL)** and **drag coeffici
 In the case of **ideal, incompressible, inviscid (Eulerian) flow**, the lift coefficient for a thin airfoil is given by:
 
 \[
-\boxed{C_L = 2\pi \cdot \alpha}
+C_L = 2\pi \alpha
 \]
 
 Where:
-- \( \alpha \) is the angle of attack (in **radians**)
-- The airfoil is assumed to be **infinitely thin**
-- No flow separation or stall is considered
+- \( \alpha \) is the angle of attack (in **radians**),
+- The airfoil is assumed to be **infinitely thin**,
+- **No flow separation** or **stall** is considered.
 
-This formula is derived from **thin airfoil theory**, which itself is based on the **Euler equations** and potential flow assumptions. The trailing edge behavior is resolved by enforcing the **Kutta condition**.
+This formula is derived from **thin airfoil theory**, which is based on the **Euler equations** and potential flow assumptions. The **Kutta condition** is applied at the trailing edge to ensure smooth flow detachment.
 
-> 🔎 At small angles (e.g., \( \alpha < 10^\circ \)), this approximation is highly accurate even for cambered or rounded airfoils.
+> 🔎 For small angles of attack (e.g., \( \alpha < 10^\circ \)), this approximation is highly accurate even for cambered or rounded airfoils.
+
 
 ### ⚠️ Note on Navier-Stokes Models
 
