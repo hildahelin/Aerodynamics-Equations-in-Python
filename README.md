@@ -34,20 +34,6 @@ Real viscous flow (modeled by Navier-Stokes equations) includes boundary layer e
 
 ---
 
-## 📁 File Structure
-
-project/
-│
-├── naca2412polar_navier.txt # Navier-Stokes data: alpha | CL | CD
-├── main.py # Code to compute and plot CL & CD
-├── README.md # You are here
-
-yaml
-Copier
-Modifier
-
----
-
 ## 📚 References
 Anderson, J. D. Fundamentals of Aerodynamics, McGraw-Hill
 
