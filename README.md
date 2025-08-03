@@ -36,13 +36,14 @@ The **Kutta condition** is applied at the trailing edge to ensure smooth flow de
 
 ### ⚠️ Note on Navier-Stokes Models
 
-Real viscous flow (modeled by the **Navier-Stokes equations**) includes:
-- Boundary layer formation
-- Flow separation
-- Skin friction drag
-- Stall behavior at high angles
+In contrast, real-life flow is governed by the **Navier-Stokes equations**, which include:
 
-Therefore, the actual lift and drag curves deviate from the ideal Euler predictions as α increases, especially beyond stall.
+- Boundary layer effects  
+- Flow separation and stall  
+- Skin friction and pressure drag
+
+In this project, the **CL** and **CD** values based on Navier-Stokes were obtained using **XFOIL**, a widely used computational tool that solves for 2D viscous/inviscid interaction over airfoils.  
+This makes the data more representative of real aerodynamic behavior compared to the ideal Euler model.
 
 ---
 
