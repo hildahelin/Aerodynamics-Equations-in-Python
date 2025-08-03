@@ -47,6 +47,22 @@ This makes the data more representative of real aerodynamic behavior compared to
 
 ---
 
+## 📊 Comparison & Graph Interpretation
+
+The plotted results demonstrate:
+
+- **Lift (CL):**
+  - Euler model shows a **linear increase** with angle of attack.
+  - Navier-Stokes data shows **nonlinear behavior**, with **stall** causing a sudden drop in lift at high angles.
+
+- **Drag (CD):**
+  - Euler model predicts **near-zero drag**, since it ignores viscous effects.
+  - Navier-Stokes model predicts **increasing drag**, due to **friction and pressure drag**.
+
+This highlights the limitations of ideal theory (Euler) and the realism brought by viscous modeling (Navier-Stokes).
+
+---
+
 ## 📚 References
 
 - Anderson, J. D. *Fundamentals of Aerodynamics*, McGraw-Hill  
