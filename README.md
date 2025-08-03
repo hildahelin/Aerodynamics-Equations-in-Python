@@ -30,7 +30,7 @@ Where:
 This formula is derived from **thin airfoil theory**, which is based on the **Euler equations** and potential flow assumptions.  
 The **Kutta condition** is applied at the trailing edge to ensure smooth flow detachment.
 
-> 🔎 For small angles of attack (e.g., \( \𝛼 < 10^\circ \)), this approximation is highly accurate even for cambered or rounded airfoils.
+> 🔎 For small attack angles (under 10°), the classic thin airfoil theory still provides accurate lift estimates, even for real-world airfoil shapes.
 
 ---
 
